@@ -36,3 +36,11 @@ bin/testRectangle: testRectangle.cpp Rectangle.o Shape.o Point2D.o
 	mkdir -p bin
 	g++ -c testRectangle.cpp
 	g++ -o bin/testRectangle testRectangle.o Rectangle.o Shape.o Point2D.o
+
+Square.o: Square.h Square.cpp Rectangle.h Shape.h Point2D.h
+	g++ -c Square.cpp
+
+bin/testSquare: testSquare.cpp Square.o Rectangle.o Shape.o Point2D.o
+	mkdir -p bin
+	g++ -c testSquare.cpp
+	g++ -o bin/testSquare testSquare.o Square.o Rectangle.o Shape.o Point2D.o
