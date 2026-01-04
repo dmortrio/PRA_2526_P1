@@ -44,3 +44,11 @@ bin/testSquare: testSquare.cpp Square.o Rectangle.o Shape.o Point2D.o
 	mkdir -p bin
 	g++ -c testSquare.cpp
 	g++ -o bin/testSquare testSquare.o Square.o Rectangle.o Shape.o Point2D.o
+
+Drawing.o: Drawing.h Drawing.cpp List.h ListLinked.h Shape.h Circle.h Square.h
+	g++ -c Drawing.cpp
+
+bin/testDrawing: testDrawing.cpp Drawing.o Square.o Rectangle.o Circle.o Shape.o Point2D.o
+	mkdir -p bin
+	g++ -c testDrawing.cpp
+	g++ -o bin/testDrawing testDrawing.o Drawing.o Square.o Rectangle.o Circle.o Shape.o Point2D.o
