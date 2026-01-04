@@ -30,3 +30,6 @@ Circle.o: Circle.h Circle.cpp Shape.h Point2D.h
 bin/testCircle: testCircle.cpp Circle.o Shape.o Point2D.o
 	mkdir -p bin
 	g++ -o bin/testCircle testCircle.cpp Circle.o Shape.o Point2D.o
+
+Rectangle.o: Rectangle.h Rectangle.cpp Shape.h Point2D.h
+	g++ -c Rectangle.cpp
